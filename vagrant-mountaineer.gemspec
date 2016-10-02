@@ -3,6 +3,7 @@ lib = File.expand_path('../lib', __FILE__)
 
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
+require 'vagrant/mountaineer/synopsis'
 require 'vagrant/mountaineer/version'
 
 Gem::Specification.new do |spec|
@@ -12,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.authors  = ['Marc Neudert']
   spec.email    = ['marc.neudert@gmail.com']
 
-  spec.summary     = 'Mounts projects from a Projectfile'
+  spec.summary     = VagrantPlugins::Mountaineer::SYNOPSIS
   spec.description = 'Vagrant plugin to mount projects specified'\
                      ' in a Projectfile to one of your vagrant boxes'
   spec.homepage    = 'https://github.com/mneudert/vagrant-mountaineer'
