@@ -1,7 +1,7 @@
 module VagrantPlugins
-  module DevCommands
+  module Mountaineer
     # Defines the vagrant configuration
-    class Command < Vagrant.plugin(2, :config)
+    class Config < Vagrant.plugin(2, :config)
       attr_accessor :project_files
 
       def initialize
