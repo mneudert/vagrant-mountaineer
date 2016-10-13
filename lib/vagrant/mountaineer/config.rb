@@ -2,6 +2,8 @@ module VagrantPlugins
   module Mountaineer
     # Defines the vagrant configuration
     class Config < Vagrant.plugin(2, :config)
+      UTIL = VagrantPlugins::Mountaineer::Util
+
       attr_accessor :project_files
 
       def initialize
@@ -16,7 +18,7 @@ module VagrantPlugins
         errors = _detected_errors
 
         @project_files.each do |file|
-          errors << validate_project_file(file, machine.env.root_path)
+          errors << validate_project_file(file, machine.env)
         end
 
         errors.compact!
@@ -26,9 +28,8 @@ module VagrantPlugins
 
       private
 
-      def validate_project_file(file, root)
-        file_path = Pathname.new(file)
-        file_path = Pathname.new(root) + file_path unless file_path.absolute?
+      def validate_project_file(file, env)
+        file_path = UTIL.env_abspath(file, env)
 
         return nil if file_path.exist?
 
