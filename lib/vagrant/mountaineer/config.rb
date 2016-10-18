@@ -15,7 +15,7 @@ module VagrantPlugins
       end
 
       def validate(machine)
-        errors = _detected_errors
+        errors = []
 
         @project_files.each do |file|
           errors << validate_project_file(file, machine.env)
