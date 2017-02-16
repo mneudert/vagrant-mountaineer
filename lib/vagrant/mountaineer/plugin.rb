@@ -13,6 +13,10 @@ module VagrantPlugins
         hook.prepend(VagrantPlugins::Mountaineer::Action.hook_projects)
       end
 
+      action_hook(:mountaineer, :machine_action_resume) do |hook|
+        hook.prepend(VagrantPlugins::Mountaineer::Action.hook_projects)
+      end
+
       action_hook(:mountaineer, :machine_action_up) do |hook|
         hook.prepend(VagrantPlugins::Mountaineer::Action.hook_projects)
       end
