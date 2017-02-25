@@ -4,21 +4,21 @@ module VagrantPlugins
     class Config < Vagrant.plugin(2, :config)
       UTIL = VagrantPlugins::Mountaineer::Util
 
-      attr_accessor :project_files
+      attr_accessor :projectfiles
 
       def initialize
-        @project_files = UNSET_VALUE
+        @projectfiles = UNSET_VALUE
       end
 
       def finalize!
-        @project_files = [] if @project_files == UNSET_VALUE
+        @projectfiles = [] if @projectfiles == UNSET_VALUE
       end
 
       def validate(machine)
         errors = []
 
-        @project_files.each do |file|
-          errors << validate_project_file(file, machine.env)
+        @projectfiles.each do |file|
+          errors << validate_projectfile(file, machine.env)
         end
 
         errors.compact!
@@ -28,7 +28,7 @@ module VagrantPlugins
 
       private
 
-      def validate_project_file(file, env)
+      def validate_projectfile(file, env)
         file_path = UTIL.env_abspath(file, env)
 
         return nil if file_path.exist?

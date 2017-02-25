@@ -11,8 +11,8 @@ module VagrantPlugins
         end
 
         def call(env)
-          files_global  = @config.mountaineer.project_files
-          files_machine = @machine.config.mountaineer.project_files
+          files_global  = @config.mountaineer.projectfiles
+          files_machine = @machine.config.mountaineer.projectfiles
           files         = (files_global + files_machine).uniq
 
           puts "project_files: #{files}"
