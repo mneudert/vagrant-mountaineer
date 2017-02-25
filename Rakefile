@@ -27,4 +27,4 @@ namespace :test do
 end
 
 task default: ['style:ruby', 'test:unit']
-task travis: ['test:unit']
+task travis: ['style:ruby', 'test:unit']
