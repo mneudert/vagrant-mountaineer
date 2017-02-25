@@ -1,4 +1,4 @@
-require_relative '../../spec_helper'
+require_relative '../../../spec_helper'
 
 describe VagrantPlugins::Mountaineer::ProjectFile do
   it 'locates absolute project files' do
