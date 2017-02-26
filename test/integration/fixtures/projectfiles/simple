@@ -1,1 +1,3 @@
-project 'foo', bar: 'baz'
+project 'foo',
+    hostpath: '/tmp',
+    guestpath: '/tmp/from_host'

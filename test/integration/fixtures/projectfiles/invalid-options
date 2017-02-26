@@ -1,0 +1,11 @@
+project 'missing-guestpath'
+
+project 'missing-hostpath',
+    guestpath: '.'
+
+project 'empty-guestpath',
+    guestpath: ''
+
+project 'empty-hostpath',
+    guestpath: '.',
+    hostpath: ''
