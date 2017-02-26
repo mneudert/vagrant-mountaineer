@@ -1,7 +1,7 @@
 module VagrantPlugins
   module Mountaineer
     # Mountaineer project file representation
-    class ProjectFile
+    class Projectfile
       def initialize(env, path)
         @env  = env
         @path = Pathname.new(path)

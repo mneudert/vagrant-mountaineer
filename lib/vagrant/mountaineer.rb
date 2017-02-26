@@ -6,7 +6,7 @@ I18n.reload!
 require 'vagrant/mountaineer/synopsis'
 require 'vagrant/mountaineer/version'
 
-require 'vagrant/mountaineer/project_file'
+require 'vagrant/mountaineer/projectfile'
 require 'vagrant/mountaineer/util'
 
 require 'vagrant/mountaineer/action'

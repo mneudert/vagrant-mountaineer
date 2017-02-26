@@ -1,6 +1,6 @@
 require_relative '../../../spec_helper'
 
-describe VagrantPlugins::Mountaineer::ProjectFile do
+describe VagrantPlugins::Mountaineer::Projectfile do
   it 'locates absolute project files' do
     file = described_class.new({}, __FILE__)
 
