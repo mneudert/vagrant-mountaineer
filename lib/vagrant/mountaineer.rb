@@ -1,5 +1,8 @@
 require 'vagrant'
 
+I18n.load_path << File.expand_path('../../../locales/en.yml', __FILE__)
+I18n.reload!
+
 require 'vagrant/mountaineer/synopsis'
 require 'vagrant/mountaineer/version'
 

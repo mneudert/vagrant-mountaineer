@@ -2,6 +2,8 @@ module VagrantPlugins
   module Mountaineer
     # Vagrant project registry
     class Registry
+      I18N_KEY = 'vagrant_mountaineer.registry'.freeze
+
       attr_accessor :projects
 
       def initialize(env)
@@ -16,8 +18,8 @@ module VagrantPlugins
       private
 
       def options_warning(name)
-        @env.ui.warn "The project '#{name}' is not configured properly."
-        @env.ui.warn 'Your definition of it will be ignored.'
+        @env.ui.warn I18n.t("#{I18N_KEY}.err_configuration", name: name)
+        @env.ui.warn I18n.t("#{I18N_KEY}.def_ignored")
         @env.ui.warn ''
       end
 

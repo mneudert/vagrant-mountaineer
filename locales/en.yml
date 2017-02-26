@@ -1,0 +1,5 @@
+en:
+  vagrant_mountaineer:
+    registry:
+      def_ignored:       "Your definition of it will be ignored."
+      err_configuration: "The project '%{name}' is not configured properly."
