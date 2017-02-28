@@ -17,28 +17,28 @@ module VagrantPlugins
 
       private
 
-      def options_warning(name)
+      def config_warning(name)
         @env.ui.warn I18n.t("#{I18N_KEY}.err_configuration", name: name)
         @env.ui.warn I18n.t("#{I18N_KEY}.def_ignored")
         @env.ui.warn ''
       end
 
-      def project(name, options = nil)
-        options = {} unless options.is_a?(Hash)
+      def project(name, config = nil)
+        config = {} unless config.is_a?(Hash)
 
-        return options_warning(name) unless valid_options?(options)
+        return config_warning(name) unless valid_config?(config)
 
-        options[:name] = name
+        config[:name] = name
 
-        @projects[name] = options
+        @projects[name] = config
       end
 
-      def valid_options?(options)
-        return false unless options[:guestpath].is_a?(String)
-        return false unless options[:hostpath].is_a?(String)
+      def valid_config?(config)
+        return false unless config[:guestpath].is_a?(String)
+        return false unless config[:hostpath].is_a?(String)
 
-        return false if options[:guestpath].empty?
-        return false if options[:hostpath].empty?
+        return false if config[:guestpath].empty?
+        return false if config[:hostpath].empty?
 
         true
       end
