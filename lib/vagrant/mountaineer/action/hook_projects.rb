@@ -35,11 +35,11 @@ module VagrantPlugins
 
         def mount_projects
           @registry.projects.each do |name, project|
-            @machine.config.vm.synced_folders[name] = {
+            @machine.config.vm.synced_folders[name] = project[:options].merge(
               disabled:  false,
               guestpath: project[:guestpath],
               hostpath:  project[:hostpath]
-            }
+            )
           end
         end
       end
