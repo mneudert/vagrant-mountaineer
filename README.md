@@ -2,6 +2,8 @@
 
 Mounts projects from a Projectfile.
 
+__This plugin is experimental and may change unexpectedly.__
+
 
 ## Usage
 
