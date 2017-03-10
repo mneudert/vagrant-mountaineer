@@ -25,7 +25,7 @@ module VagrantPlugins
 
       def project(name, config = nil)
         config           = {} unless config.is_a?(Hash)
-        config[:options] = {} unless config.is_a?(Hash)
+        config[:options] = {} unless config[:options].is_a?(Hash)
 
         return config_warning(name) unless valid_config?(config)
 
