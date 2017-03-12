@@ -35,12 +35,20 @@ module VagrantPlugins
 
         def mount_projects
           @registry.projects.each do |name, project|
+            next if skip_mount?(project)
+
             @machine.config.vm.synced_folders[name] = project[:options].merge(
               disabled:  false,
               guestpath: project[:guestpath],
               hostpath:  project[:hostpath]
             )
           end
+        end
+
+        def skip_mount?(project)
+          project.key?(:optional) &&
+            true == project[:optional] &&
+            !File.directory?(project[:hostpath])
         end
       end
     end

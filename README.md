@@ -42,11 +42,19 @@ project 'test_nfs',
     options: {
       type: :nfs
     }
+
+project 'optional',
+    guestpath: '/data/plugin-optional',
+    hostpath: './may-not-exist',
+    optional: true
 ```
 
 Values for `:guestpath ` and `:hostpath` are required. Additional options
 (like `type`) can be configuring using the `:options` key. The name of the
 project will be used as the mount identifier.
+
+If a project is defined as `optional` it will not be mounted if the host
+path is missing. For the time being this is done silently.
 
 
 ## License
