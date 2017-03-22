@@ -1,0 +1,3 @@
+project 'project_a',
+    guestpath: '/test/project_a',
+    hostpath:  './project_a'

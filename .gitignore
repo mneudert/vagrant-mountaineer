@@ -4,3 +4,4 @@
 /vendor/
 /Gemfile.lock
 /vagrant-mountaineer-*.gem
+/test/acceptance/.vagrant/
