@@ -12,5 +12,6 @@ require 'vagrant/mountaineer/util'
 
 require 'vagrant/mountaineer/action'
 require 'vagrant/mountaineer/action/hook_projects'
+require 'vagrant/mountaineer/command'
 require 'vagrant/mountaineer/config'
 require 'vagrant/mountaineer/plugin'

@@ -5,6 +5,10 @@ module VagrantPlugins
       name 'vagrant-mountaineer'
       description VagrantPlugins::Mountaineer::SYNOPSIS
 
+      command :mountaineer do
+        Command
+      end
+
       config :mountaineer do
         Config
       end
