@@ -47,7 +47,7 @@ module VagrantPlugins
 
         def skip_mount?(project)
           project.key?(:optional) &&
-            true == project[:optional] &&
+            project[:optional] == true &&
             !File.directory?(project[:hostpath])
         end
       end

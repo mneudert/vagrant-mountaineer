@@ -9,7 +9,7 @@ module VagrantPlugins
       def execute
         command = select_command(@argv)
 
-        return display_info if 'info' == command
+        return display_info if command == 'info'
 
         display_help
       end

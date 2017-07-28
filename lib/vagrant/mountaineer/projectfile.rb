@@ -8,7 +8,7 @@ module VagrantPlugins
       end
 
       def exist?
-        nil != path
+        !path.nil?
       end
 
       def path
