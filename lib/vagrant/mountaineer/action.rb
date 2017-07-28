@@ -1,6 +1,6 @@
 module VagrantPlugins
   module Mountaineer
-    # Vagrant plugin definition
+    # Action hook definition
     module Action
       include Vagrant::Action::Builtin
 

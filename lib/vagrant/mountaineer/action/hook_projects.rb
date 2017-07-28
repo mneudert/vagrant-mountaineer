@@ -1,7 +1,7 @@
 module VagrantPlugins
   module Mountaineer
     module Action
-      # Vagrant project hook
+      # Project hook to load and mount projectfile contents
       class HookProjects
         PROJECTFILE = VagrantPlugins::Mountaineer::Projectfile
         REGISTRY    = VagrantPlugins::Mountaineer::Registry

@@ -1,6 +1,6 @@
 module VagrantPlugins
   module Mountaineer
-    # Defines the vagrant configuration
+    # Vagrant configuration definition
     class Config < Vagrant.plugin(2, :config)
       UTIL = VagrantPlugins::Mountaineer::Util
 

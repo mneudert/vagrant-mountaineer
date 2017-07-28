@@ -1,6 +1,6 @@
 module VagrantPlugins
   module Mountaineer
-    # Vagrant project registry
+    # Project registry
     class Registry
       I18N_KEY = 'vagrant_mountaineer.registry'.freeze
 
