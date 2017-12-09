@@ -6,7 +6,6 @@ module VagrantPlugins
 
       def self.hook_projects
         Vagrant::Action::Builder.new.tap do |builder|
-          builder.use ConfigValidate
           builder.use HookProjects
         end
       end
