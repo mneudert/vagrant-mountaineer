@@ -7,11 +7,7 @@ module VagrantPlugins
       end
 
       def execute
-        command = select_command(@argv)
-
-        return display_info if command == 'info'
-
-        display_help
+        send(select_command(@argv))
       end
 
       private
@@ -28,9 +24,9 @@ module VagrantPlugins
 
       def select_command(argv)
         case argv[0]
-        when 'help' then 'help'
-        when 'info' then 'info'
-        else 'help'
+        when 'help' then :display_help
+        when 'info' then :display_info
+        else :display_help
         end
       end
     end
