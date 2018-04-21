@@ -57,6 +57,15 @@ If a project is defined as `optional` it will not be mounted if the host
 path is missing. For the time being this is done silently.
 
 
+### Mountpoint Listing
+
+You can list all known mountpoints in all machines:
+
+```shell
+vagrant mountaineer info
+```
+
+
 ## License
 
 Licensed under the [MIT license](http://opensource.org/licenses/MIT).

@@ -48,4 +48,12 @@ result=$(trim "$(bundle exec vagrant ssh secondary -c 'ls -la /test/project_a')"
   exit 1
 }
 
+result=$(trim "$(bundle exec vagrant mountaineer info)")
+
+[[ "${result}" == *'/test/project_a'*'(Host:'*'/test/acceptance/project_a)' ]] || {
+  echo 'Info not listing correct mountpoints...'
+  echo "Got result: '${result}'"
+  exit 1
+}
+
 echo 'Success!'

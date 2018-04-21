@@ -11,6 +11,12 @@ module VagrantPlugins
 
         file_path
       end
+
+      def self.pad_to(items)
+        items = items.keys unless items.is_a?(Array)
+
+        items.map(&:length).max
+      end
     end
   end
 end
