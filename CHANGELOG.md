@@ -1,6 +1,6 @@
 # Changelog
 
-## v0.2.0.dev
+## v0.2.0 (2018-04-22)
 
 - Enhancements
   - A list of all mountpoints can be printed by using the info subcommand
