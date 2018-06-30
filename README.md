@@ -4,7 +4,6 @@ Mounts projects from a Projectfile.
 
 __This plugin is experimental and may change unexpectedly.__
 
-
 ## Usage
 
 ### Vagrant Configuration
@@ -56,7 +55,6 @@ project will be used as the mount identifier.
 If a project is defined as `optional` it will not be mounted if the host
 path is missing. For the time being this is done silently.
 
-
 ### Mountpoint Listing
 
 You can list all known mountpoints in all machines:
@@ -64,7 +62,6 @@ You can list all known mountpoints in all machines:
 ```shell
 vagrant mountaineer info
 ```
-
 
 ## License
 
