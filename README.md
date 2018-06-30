@@ -63,6 +63,17 @@ You can list all known mountpoints in all machines:
 vagrant mountaineer info
 ```
 
+## Development
+
+You can always install the plugin directly from source:
+
+```shell
+gem build vagrant-mountaineer.gemspec
+
+vagrant plugin uninstall vagrant-mountaineer
+vagrant plugin install vagrant-mountaineer-x.x.x.dev.gem
+```
+
 ## License
 
 Licensed under the [MIT license](http://opensource.org/licenses/MIT).
