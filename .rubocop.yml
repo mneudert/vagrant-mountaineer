@@ -12,4 +12,5 @@ Metrics/BlockLength:
 
 Naming/FileName:
   Exclude:
+    - 'vagrant-mountaineer.gemspec'
     - 'test/acceptance/Vagrantfile'

@@ -20,6 +20,7 @@ module VagrantPlugins
       def locate_projectfile
         if @path.absolute?
           return nil unless @path.exist?
+
           return @path
         end
 
