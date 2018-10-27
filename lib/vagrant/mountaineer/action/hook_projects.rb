@@ -38,9 +38,9 @@ module VagrantPlugins
             next if skip_mount?(project)
 
             @machine.config.vm.synced_folders[name] = project[:options].merge(
-              disabled:  false,
+              disabled: false,
               guestpath: project[:guestpath],
-              hostpath:  project[:hostpath]
+              hostpath: project[:hostpath]
             )
           end
         end
