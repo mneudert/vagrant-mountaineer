@@ -8,8 +8,7 @@ __This plugin is experimental and may change unexpectedly.__
 
 ### Vagrant Configuration
 
-The plugin becomes active once you hook one or more projectfiles into
-your `Vagrantfile`:
+The plugin becomes active once you hook one or more projectfiles into your `Vagrantfile`:
 
 ```ruby
 Vagrant.configure("2") do |config|
@@ -20,15 +19,11 @@ Vagrant.configure("2") do |config|
 end
 ```
 
-This will look for project definitions in two files
-(`primary.projectfile` and `secondary.projectfile`). All paths will be
-expanded by prefixing the vagrant root directory (where your `Vagrantfile`
-resides) or taken as is if absolute.
+This will look for project definitions in two files (`primary.projectfile` and `secondary.projectfile`). All paths will be expanded by prefixing the vagrant root directory (where your `Vagrantfile` resides) or taken as is if absolute.
 
 ### Project Definition
 
-Defining a project to be mounted is done by adding its definition to your
-projectfile:
+Defining a project to be mounted is done by adding its definition to your projectfile:
 
 ```ruby
 project 'lib',
@@ -48,12 +43,9 @@ project 'optional',
     optional: true
 ```
 
-Values for `:guestpath ` and `:hostpath` are required. Additional options
-(like `type`) can be configuring using the `:options` key. The name of the
-project will be used as the mount identifier.
+Values for `:guestpath ` and `:hostpath` are required. Additional options (like `type`) can be configuring using the `:options` key. The name of the project will be used as the mount identifier.
 
-If a project is defined as `optional` it will not be mounted if the host
-path is missing. For the time being this is done silently.
+If a project is defined as `optional` it will not be mounted if the host path is missing. For the time being this is done silently.
 
 ### Mountpoint Listing
 
