@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module VagrantPlugins
   module Mountaineer
     # Vagrant configuration definition
@@ -7,6 +9,8 @@ module VagrantPlugins
       attr_accessor :projectfiles
 
       def initialize
+        super
+
         @projectfiles = UNSET_VALUE
       end
 

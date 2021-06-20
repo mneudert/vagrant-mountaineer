@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module VagrantPlugins
   module Mountaineer
     # Defines the mountaineer command
@@ -56,7 +58,6 @@ module VagrantPlugins
 
       def select_command(argv)
         case argv[0]
-        when 'help' then :display_help
         when 'info' then :display_info
         else :display_help
         end

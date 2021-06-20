@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module VagrantPlugins
   module Mountaineer
     # Vagrant plugin definition

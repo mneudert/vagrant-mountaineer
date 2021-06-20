@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative '../../../spec_helper'
 
 describe VagrantPlugins::Mountaineer::Projectfile do
@@ -15,7 +17,7 @@ describe VagrantPlugins::Mountaineer::Projectfile do
   end
 
   it 'fails to locate not existing absolute project files' do
-    path = File.dirname(__FILE__) + '/does-not-exist'
+    path = "#{File.dirname(__FILE__)}/does-not-exist"
     file = described_class.new({}, path)
 
     expect(file.exist?).to be(false)

@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 module VagrantPlugins
   module Mountaineer
     # Project registry
     class Registry
-      I18N_KEY = 'vagrant_mountaineer.registry'.freeze
+      I18N_KEY = 'vagrant_mountaineer.registry'
 
       attr_accessor :projects
 
