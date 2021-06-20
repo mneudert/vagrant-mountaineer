@@ -5,7 +5,13 @@ AllCops:
     - '*.gemspec'
     - 'Gemfile'
     - 'Rakefile'
+  NewCops: enable
+  SuggestExtensions: false
   TargetRubyVersion: 2.4
+
+Layout/LineLength:
+  Exclude:
+    - 'test/acceptance/Vagrantfile'
 
 Metrics/BlockLength:
   Exclude:
