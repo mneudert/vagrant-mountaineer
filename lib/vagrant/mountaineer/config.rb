@@ -4,6 +4,7 @@ module VagrantPlugins
   module Mountaineer
     # Vagrant configuration definition
     class Config < Vagrant.plugin(2, :config)
+      I18N_KEY = 'vagrant_mountaineer.config'
       UTIL = VagrantPlugins::Mountaineer::Util
 
       attr_accessor :projectfiles
@@ -37,7 +38,7 @@ module VagrantPlugins
 
         return nil if file_path.exist?
 
-        "Project file not found: #{file_path}"
+        I18n.t("#{I18N_KEY}.projectfile_not_found", file_path: file_path)
       end
     end
   end

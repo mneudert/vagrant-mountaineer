@@ -1,5 +1,8 @@
 en:
   vagrant_mountaineer:
+    config:
+      projectfile_not_found: "Projectfile not found: %{file_path}"
+
     registry:
       def_ignored:       "Your definition of it will be ignored."
       err_configuration: "The project '%{name}' is not configured properly."
