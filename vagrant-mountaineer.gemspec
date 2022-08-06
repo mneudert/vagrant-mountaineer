@@ -21,7 +21,7 @@ Gem::Specification.new do |spec|
 
   spec.summary     = VagrantPlugins::Mountaineer::SYNOPSIS
   spec.description = 'Vagrant plugin to mount projects specified'\
-                     ' in a Projectfile to one of your vagrant boxes'
+                     ' in a Projectfile to one of your Vagrant boxes'
   spec.homepage    = 'https://github.com/mneudert/vagrant-mountaineer'
   spec.license     = 'MIT'
 

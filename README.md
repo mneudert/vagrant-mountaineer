@@ -19,7 +19,7 @@ Vagrant.configure("2") do |config|
 end
 ```
 
-This will look for project definitions in two files (`primary.projectfile` and `secondary.projectfile`). All paths will be expanded by prefixing the vagrant root directory (where your `Vagrantfile` resides) or taken as is if absolute.
+This will look for project definitions in two files (`primary.projectfile` and `secondary.projectfile`). All paths will be expanded by prefixing the Vagrant root directory (where your `Vagrantfile` resides) or taken as is if absolute.
 
 ### Project Definition
 
