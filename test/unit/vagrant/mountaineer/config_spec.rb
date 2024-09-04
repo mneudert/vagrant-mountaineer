@@ -7,7 +7,7 @@ describe VagrantPlugins::Mountaineer::Config do
   describe 'validating configuration' do
     it 'finds missing project files' do
       config  = described_class.new
-      machine = OpenStruct.new(env: OpenStruct.new(root_path: '.'))
+      machine = Struct.new(:env).new(Struct.new(:root_path).new('.'))
 
       config.projectfiles = [
         File.join(File.dirname(__FILE__), 'does-not-exist')

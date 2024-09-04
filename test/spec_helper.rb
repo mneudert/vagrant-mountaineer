@@ -2,4 +2,4 @@
 
 require 'vagrant/mountaineer'
 
-require_relative './helpers/ui'
+require_relative 'helpers/ui'

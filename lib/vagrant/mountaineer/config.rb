@@ -20,10 +20,8 @@ module VagrantPlugins
       end
 
       def validate(machine)
-        errors = []
-
-        @projectfiles.each do |file|
-          errors << validate_projectfile(file, machine.env)
+        errors = @projectfiles.map do |file|
+          validate_projectfile(file, machine.env)
         end
 
         errors.compact!

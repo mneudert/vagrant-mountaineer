@@ -11,7 +11,7 @@ describe VagrantPlugins::Mountaineer::Projectfile do
   end
 
   it 'locates relative project files' do
-    env  = OpenStruct.new(root_path: Pathname.new(File.dirname(__FILE__)))
+    env  = Struct.new(:root_path).new(Pathname.new(File.dirname(__FILE__)))
     file = described_class.new(env, File.basename(__FILE__))
 
     expect(file.exist?).to be(true)
@@ -25,7 +25,7 @@ describe VagrantPlugins::Mountaineer::Projectfile do
   end
 
   it 'fails to locate not existing relative project files' do
-    env  = OpenStruct.new(root_path: Pathname.new(File.dirname(__FILE__)))
+    env  = Struct.new(:root_path).new(Pathname.new(File.dirname(__FILE__)))
     file = described_class.new(env, 'does-not-exist')
 
     expect(file.exist?).to be(false)

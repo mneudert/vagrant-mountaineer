@@ -51,9 +51,9 @@ module VagrantPlugins
       end
 
       def get_machine_mounts(machine)
-        machine.config.vm.synced_folders.sort.map do |_name, sf|
+        machine.config.vm.synced_folders.sort.to_h do |_name, sf|
           [sf[:guestpath], sf[:hostpath]]
-        end.to_h
+        end
       end
 
       def select_command(argv)
