@@ -20,6 +20,7 @@ group :development do
   gem 'rake', '~> 13.0'
   gem 'rspec', '~> 3.10'
   gem 'rubocop', '~> 1.66.0'
+  gem 'rubocop-rake', '~> 0.6.0', require: false
 end
 
 group :plugins do
