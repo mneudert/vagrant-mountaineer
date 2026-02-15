@@ -3,7 +3,7 @@
 require_relative '../../../spec_helper'
 
 describe VagrantPlugins::Mountaineer::Registry do
-  projectfile = VagrantPlugins::Mountaineer::Projectfile
+  let(:projectfile) { VagrantPlugins::Mountaineer::Projectfile }
 
   describe 'project definition' do
     it 'allows defining projects' do
